@@ -1,10 +1,10 @@
 const expect = require("chai").expect;
-const isOrphan = require("../../../../src/extract/derive/orphan/is-orphan");
+const isOrphan = require("../../../../src/enrich/derive/orphan/is-orphan");
 
 const ONE_MODULE_FIXTURE = require("./fixtures/oneModule.json");
 const TWO_MODULES_FIXTURE = require("./fixtures/twoModule.json");
 
-describe("extract/derive/orphan/isOrphan", () => {
+describe("enrich/derive/orphan/isOrphan", () => {
   it("flags a single module dependency graph as orphan", () => {
     expect(
       isOrphan({ source: "./lonely.js", dependencies: [] }, ONE_MODULE_FIXTURE)

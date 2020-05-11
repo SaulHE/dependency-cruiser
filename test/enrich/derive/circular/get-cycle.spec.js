@@ -1,9 +1,9 @@
 const expect = require("chai").expect;
-const getCycle = require("../../../../src/extract/derive/circular/get-cycle");
+const getCycle = require("../../../../src/enrich/derive/circular/get-cycle");
 
 const inputGraphs = require("./inputgraphs.json");
 
-describe("extract/derive/circular/getCycle", () => {
+describe("enrich/derive/circular/getCycle", () => {
   it("leaves non circular dependencies alone", () => {
     expect(getCycle(inputGraphs.A_B, "a", "b")).to.deep.equal([]);
   });

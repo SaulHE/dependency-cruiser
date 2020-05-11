@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
-const compare = require("../../../src/extract/utl/compare");
+const compare = require("../../../src/enrich/utl/compare");
 
-describe("extract/utl/compare - severities", () => {
+describe("enrich/utl/compare - severities", () => {
   it("returns 0 for identical severities", () => {
     expect(compare.severities("warn", "warn")).to.equal(0);
   });

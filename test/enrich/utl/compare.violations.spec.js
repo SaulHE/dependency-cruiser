@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
-const compare = require("../../../src/extract/utl/compare");
+const compare = require("../../../src/enrich/utl/compare");
 
-describe("extract/utl/compare - violations", () => {
+describe("enrich/utl/compare - violations", () => {
   const lViolation = {
     from: "from",
     to: "to",

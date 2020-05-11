@@ -1,4 +1,5 @@
-const filenameMatchesPattern = require("./utl/filename-matches-pattern");
+const _get = require("lodash/get");
+const filenameMatchesPattern = require("../utl/filename-matches-pattern");
 
 function getFocusModules(pModules, pPattern) {
   return pModules
@@ -42,13 +43,14 @@ function getCalledModules(pModules, pPattern, pFocusModules) {
     .map((pModule) => ({ ...pModule, matchesFocus: false, dependencies: [] }));
 }
 
-module.exports = function addFocus(pModules, pPattern) {
-  if (pPattern) {
-    const lFocusModules = getFocusModules(pModules, pPattern);
+module.exports = function addFocus(pModules, pFilter) {
+  const lPattern = _get(pFilter, "path");
+  if (lPattern) {
+    const lFocusModules = getFocusModules(pModules, lPattern);
 
     return lFocusModules
-      .concat(getCallingModules(pModules, pPattern))
-      .concat(getCalledModules(pModules, pPattern, lFocusModules));
+      .concat(getCallingModules(pModules, lPattern))
+      .concat(getCalledModules(pModules, lPattern, lFocusModules));
   }
   return pModules;
 };

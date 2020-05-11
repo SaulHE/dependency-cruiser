@@ -2,7 +2,7 @@ const path = require("path");
 
 /**
  * On win32 platforms transform win32 type paths into posix paths
- * (leaves paths on posix platforms alone)
+ * (leaves paths on posix platforms alone)ß
  *
  * This function is just to make dependency-cruiser's internal
  * representation consistent. This is the reason it doesn't have

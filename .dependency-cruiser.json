@@ -43,14 +43,14 @@
       }
     },
     {
-      "name": "extract-to-validate-only",
-      "comment": "This extraction module depends on something outside extraction that is not a utility or validation. Which is odd, given the goal of the extraction step.",
-      "severity": "error",
+      "name": "extract-to-utl-only",
+      "comment": "This extraction module depends on something outside extraction that is not a utility. Which is odd, given the goal of the extraction step.",
+      "severity": "warn",
       "from": {
         "path": "(^src/extract/)"
       },
       "to": {
-        "pathNot": "$1|^node_modules|^(path|fs|module|package.json)$|^src/(utl|validate)",
+        "pathNot": "$1|^node_modules|^(path|fs|module|package.json)$|^src/utl",
         "exoticallyRequired": false
       }
     },

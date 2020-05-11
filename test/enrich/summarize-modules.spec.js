@@ -1,9 +1,9 @@
 const chai = require("chai");
-const summarize = require("../../src/extract/summarize");
+const summarize = require("../../src/enrich/summarize-modules");
 
 const expect = chai.expect;
 
-describe("extract/summarize - summarize extraction", () => {
+describe("enrich/summarize - summarize extraction", () => {
   it("empty", () => {
     const lResult = summarize([]);
 

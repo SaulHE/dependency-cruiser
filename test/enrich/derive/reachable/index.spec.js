@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const normalize = require("../../../../src/main/rule-set/normalize");
-const addReachability = require("../../../../src/extract/derive/reachable/index");
+const addReachability = require("../../../../src/enrich/derive/reachable/index");
 const clearCaches = require("../../../../src/extract/clear-caches");
 
 const GRAPH = [
@@ -99,7 +99,7 @@ const ANOTATED_GRAPH_FOR_HAJOO = [
   },
 ];
 
-describe("extract/derive/reachable/index - reachability detection", () => {
+describe("enrich/derive/reachable/index - reachability detection", () => {
   beforeEach(() => {
     clearCaches();
   });
